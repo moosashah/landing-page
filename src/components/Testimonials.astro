@@ -1,0 +1,49 @@
+---
+import Testimonial, { type TestimonialProps } from "./Testimonial.astro";
+const items: Array<TestimonialProps> = [
+  {
+    name: "moosa",
+    position: "person",
+    body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi,
+          iste, officia, perspiciatis possimus libero eum at dolores illum
+          consequatur quibusdam nostrum obcaecati expedita? Autem doloremque
+          amet nostrum labore repellat.`,
+  },
+  {
+    name: "raza",
+    position: "dev",
+    body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi,
+          iste, officia, perspiciatis possimus libero eum at dolores illum
+          consequatur quibusdam nostrum obcaecati expedita? Autem doloremque
+          amet nostrum labore repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi,
+          iste, officia, perspiciatis possimus libero eum at dolores illum
+          consequatur quibusdam nostrum obcaecati expedita? Autem doloremque
+          amet nostrum labore repellat.`,
+  },
+  {
+    name: "shah",
+    position: "engineer",
+    body: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi,
+          iste, officia, perspiciatis possimus libero eum at dolores illum
+          consequatur quibusdam nostrum obcaecati expedita? Autem doloremque
+          amet nostrum labore repellat.`,
+  },
+];
+---
+
+<div class="testimonials">
+  {
+    items.map((item) => (
+      <Testimonial name={item.name} position={item.position} body={item.body} />
+    ))
+  }
+</div>
+
+<style>
+  .testimonials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+</style>

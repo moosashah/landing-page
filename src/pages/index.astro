@@ -1,16 +1,29 @@
 ---
-
+import Layout from "../components/Layout.astro";
+import Main from "../components/Main.astro";
+import Section from "../components/Section.astro";
+import Testimonials from "../components/Testimonials.astro";
+const testimonials = [
+  {
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi, iste, officia, perspiciatis possimus libero eum at dolores illum consequatur quibusdam nostrum obcaecati expedita? Autem doloremque amet nostrum labore repellat.",
+    reference: "cool person",
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <Main>
+    <h1>hello world</h1>
+    <Section title="Testimonials">
+      <Testimonials />
+    </Section>
+  </Main>
+</Layout>
+
+<style>
+  article {
+    height: 50px;
+    width: 50px;
+  }
+</style>

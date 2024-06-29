@@ -1,0 +1,13 @@
+---
+export interface TestimonialProps {
+  body: string;
+  name: string;
+  position: string;
+}
+const { body, name, position } = Astro.props as TestimonialProps;
+---
+
+<article>
+  <p>{body}</p>
+  <cite>{name} - {position}</cite>
+</article>
